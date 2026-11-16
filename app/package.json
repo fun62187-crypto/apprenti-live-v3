@@ -1,28 +1,16 @@
 {
-  "name": "tanstack_start_ts",
+  "name": "apprenti-live",
   "private": true,
   "sideEffects": false,
   "type": "module",
-  "workspaces": [
-    "packages/*"
-  ],
   "scripts": {
     "dev": "vite dev",
-    "dev:design": "HF_DESIGN_INSPECTOR=1 vite dev --mode design",
-    "build": "tsc --noEmit & p1=$!; vite build & p2=$!; wait $p1 && wait $p2",
-    "build:dev": "vite build --mode development",
+    "build": "vite build",
     "preview": "vite preview",
-    "lint": "eslint .",
-    "format": "prettier --write .",
-    "typecheck": "tsc --noEmit",
-    "typecheck:packages": "for dir in packages/*; do if [ -f \"$dir/package.json\" ]; then (cd \"$dir\" && bun run typecheck); fi; done",
-    "test:packages": "for dir in packages/*; do if [ -f \"$dir/package.json\" ]; then (cd \"$dir\" && bun run test); fi; done"
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@base-ui/react": "1.5.0",
-    "@higgsfield/fnf": "workspace:*",
-    "@higgsfield/fnf-react": "workspace:*",
-    "@higgsfield/quanta": "workspace:*",
     "@hookform/resolvers": "^5.2.2",
     "@material-symbols/svg-400": "^0.45.5",
     "@radix-ui/react-accordion": "^1.2.12",
@@ -63,6 +51,7 @@
     "date-fns": "^4.1.0",
     "embla-carousel-react": "^8.6.0",
     "input-otp": "^1.4.2",
+    "lucide-react": "^0.475.0",
     "react": "^19.2.0",
     "react-day-picker": "^9.14.0",
     "react-dom": "^19.2.0",
@@ -96,5 +85,5 @@
     "typescript-eslint": "^8.56.1",
     "vite": "^7.3.1",
     "vite-plugin-svgr": "^5.2.0"
-  },
+  }
 }
